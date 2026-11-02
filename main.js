@@ -40,3 +40,12 @@ if(hero){const bg=hero.querySelector('.hero-bg');requestAnimationFrame(()=>reque
 // шапка внутренних страниц: стеклянная подложка после прокрутки
 const bar=document.querySelector('.top.inner .bar');if(bar){const s=()=>bar.classList.toggle('scrolled',scrollY>80);addEventListener('scroll',s,{passive:true});s()}
 })();
+/* footer caps: бегущая строка в обратную сторону, скролл добавляет скорость с коэффициентом 0.3 */
+(()=>{const t=document.getElementById('capsTrack');if(!t)return;const set=t.firstElementChild;t.appendChild(set.cloneNode(true));
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+let x=0,last=scrollY,boost=0,prev=performance.now(),vis=false;const base=50;
+new IntersectionObserver(e=>{vis=e[0].isIntersecting;if(vis){prev=performance.now();requestAnimationFrame(f)}}).observe(t);
+function f(now){if(!vis)return;const dt=Math.min((now-prev)/1000,.05);prev=now;const d=scrollY-last;last=scrollY;
+boost+=(Math.abs(d)*0.3-boost)*0.1;const w=set.offsetWidth;x+=base*dt+boost;if(x>=0)x-=w;if(x<-w)x+=w;
+t.style.transform=`translate3d(${x}px,0,0)`;requestAnimationFrame(f)}
+t.style.transform=`translate3d(${-set.offsetWidth}px,0,0)`;x=-set.offsetWidth;})();

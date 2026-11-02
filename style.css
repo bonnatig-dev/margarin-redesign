@@ -197,3 +197,10 @@ h2{font:700 clamp(30px,3.4vw,52px)/1.08 var(--disp);letter-spacing:-.01em}
 @media(prefers-reduced-motion:reduce){.js-anim .rv,.js-anim .ln>span,.js-anim .gm,.js-anim .im,.js-anim .im img,.js-anim .hero-bg{opacity:1!important;transform:none!important;clip-path:none!important;scale:1!important;transition:none!important}}
 .top.inner{position:sticky;top:0;z-index:40}.top.inner .util{transition:margin .5s var(--e)}
 .top.inner .bar.scrolled{background:rgba(247,243,214,.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 1px 0 rgba(59,39,22,.1);max-width:none;padding-left:max(40px,calc((100vw - 1440px)/2));padding-right:max(40px,calc((100vw - 1440px)/2))}
+/* footer caps marquee */
+.caps{overflow:hidden;margin:100px 0 30px;white-space:nowrap;line-height:1}
+.caps-track{display:flex;width:max-content;will-change:transform}
+.caps-set{display:flex;align-items:center;flex:none}
+.caps .cw{font:900 180px/1 var(--disp);letter-spacing:0;text-transform:uppercase;color:var(--acc);padding:0 .25em}
+.caps .cdrop{width:56px;height:74px;fill:var(--acc);flex:none;margin:0 .15em}
+@media(max-width:900px){.caps .cw{font-size:72px}.caps .cdrop{width:24px;height:32px}.caps{margin:64px 0 24px}}
