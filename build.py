@@ -10,7 +10,6 @@ def page(fn,title,crumbs,body,lead=""):
   out=f'''<!doctype html><html lang="ru">{h}<body class="inner-page">
 <div class="grain" aria-hidden="true"></div>
 {HEAD}
-{CONTACTS}
 <section class="phead"><div class="wrap">{cr}<h1 class="grad ptitle">{title}</h1>{f'<p class="plead">{lead}</p>' if lead else ''}</div></section>
 <main>{body}</main>
 {FOOT}
