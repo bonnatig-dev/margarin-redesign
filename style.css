@@ -130,3 +130,4 @@ h2{font:700 clamp(30px,3.4vw,52px)/1.08 var(--disp);letter-spacing:-.01em}
  .prod,.rlay,.rec,.chan,.docs,.formlay,.ab2,.ct,.deps{grid-template-columns:1fr}.rbigs{grid-template-columns:1fr 1fr}.rec-r{position:static}.timeline{grid-template-columns:1fr}.rform{grid-template-columns:1fr}.facts{gap:20px}.facts b{font-size:30px}
 }
 @media(max-width:900px){.rec-r{order:-1}}
+.ingbox b{white-space:nowrap}
