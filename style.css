@@ -173,3 +173,27 @@ h2{font:700 clamp(30px,3.4vw,52px)/1.08 var(--disp);letter-spacing:-.01em}
 @media(max-width:900px){.fgrid{grid-template-columns:1fr 1fr}.fcard{grid-column:1/-1}.foot{padding:64px 0 24px}}
 
 .menu.open .msub a{padding:7px 12px;font-size:15px}
+/* ===== v3 supporting motion (belev-inspired) ===== */
+:root{--e:cubic-bezier(.215,.61,.355,1)}
+.js-anim .rv{opacity:0;transform:translateY(24px);transition:opacity .6s var(--e),transform .6s var(--e);transition-delay:var(--d,0s)}
+.js-anim .rv.in{opacity:1;transform:none}
+.ln{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em;margin-bottom:-.08em}
+.ln>span{display:inline-block}
+.js-anim .ln>span{transform:translateY(108%);transition:transform .6s var(--e);transition-delay:var(--d,0s)}
+.js-anim .in .ln>span{transform:none}
+.js-anim .gm{clip-path:inset(0 0 100% 0);transform:translateY(20px);transition:clip-path .6s var(--e),transform .6s var(--e)}
+.js-anim .gm.in{clip-path:inset(0 0 -10% 0);transform:none}
+.js-anim .im{clip-path:inset(12% 6% 12% 6% round 16px);transition:clip-path .6s var(--e)}
+.js-anim .im img{scale:1.08;transition:scale .6s var(--e)}
+.js-anim .im.in{clip-path:inset(0 0 0 0 round 16px)}.js-anim .im.in img{scale:1}
+.js-anim .hero-bg{clip-path:inset(4% 4% 4% 4% round 16px);scale:1.06;transition:clip-path .6s var(--e),scale .6s var(--e)}
+.js-anim .hero.in .hero-bg{clip-path:inset(0 0 0 0 round 0);scale:1}
+.hero-bg{translate:0 var(--py,0)}
+.top .bar{transition:background .5s var(--e),box-shadow .5s var(--e)}
+.btn-arrow,.pill.solid,.pill.line,.pill.glass{transition:background .3s var(--e),color .3s var(--e),border-color .3s var(--e),transform .3s var(--e)}
+.pill.solid:hover{transform:translateY(-2px)}
+.rbig img,.recipe-ph img,.crow img{transition:transform .6s var(--e),scale .6s var(--e)}
+.recipe-ph:hover img,.crow:hover img{transform:scale(1.04)}
+@media(prefers-reduced-motion:reduce){.js-anim .rv,.js-anim .ln>span,.js-anim .gm,.js-anim .im,.js-anim .im img,.js-anim .hero-bg{opacity:1!important;transform:none!important;clip-path:none!important;scale:1!important;transition:none!important}}
+.top.inner{position:sticky;top:0;z-index:40}.top.inner .util{transition:margin .5s var(--e)}
+.top.inner .bar.scrolled{background:rgba(247,243,214,.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 1px 0 rgba(59,39,22,.1);max-width:none;padding-left:max(40px,calc((100vw - 1440px)/2));padding-right:max(40px,calc((100vw - 1440px)/2))}
