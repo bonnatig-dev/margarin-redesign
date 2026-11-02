@@ -11,3 +11,7 @@ requestAnimationFrame(f)})();
 (()=>{const s=document.getElementById('caps');if(!s)return;s.style.display='inline-block';
 function fit(){s.style.fontSize='100px';const w=s.parentElement.clientWidth-8;s.style.fontSize=(100*w/s.offsetWidth)+'px'}
 fit();addEventListener('resize',fit);document.fonts&&document.fonts.ready.then(fit)})();
+(()=>{const b=document.querySelector('.burger'),m=document.getElementById('menu');if(!b||!m)return;
+b.addEventListener('click',e=>{e.stopPropagation();const o=m.classList.toggle('open');b.setAttribute('aria-expanded',o);b.textContent=o?'Закрыть':'Меню'});
+document.addEventListener('click',e=>{if(!m.contains(e.target)&&m.classList.contains('open')){m.classList.remove('open');b.setAttribute('aria-expanded',false);b.textContent='Меню'}});
+if(matchMedia('(max-width:900px)').matches)document.querySelectorAll('.spec-d').forEach((d,i)=>{if(i>0)d.open=false})})();

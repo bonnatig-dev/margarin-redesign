@@ -4,11 +4,11 @@
 <link rel="stylesheet" href="style.css"></head><body>
 <div class="grain" aria-hidden="true"></div>
 <header class="top">
-  <a href="#" class="logo"><img src="assets/logo.png" alt="Золотая капля"></a>
-  <nav class="menu"><a href="#products">Продукция</a><a href="#recipes">Рецепты</a><a href="#partners">Партнёрам</a><a href="#contacts">Контакты</a></nav>
+  <a href="index.html" class="logo"><img src="assets/logo.png" alt="Золотая капля"></a>
+  <nav class="menu" id="menu"><a href="catalog.html">Продукция</a><a href="recipes.html">Рецепты</a><a href="partners.html">Партнёрам</a><a href="about.html">О компании</a><a href="contacts.html">Контакты</a></nav>
   <div class="lang"><a class="pill glass" href="#">RU</a><a class="pill glass" href="#">EN</a><a class="pill glass" href="#">BY</a></div>
   <a class="call pill glass" href="tel:+375173748625" aria-label="Позвонить в отдел продаж">Позвонить</a>
-  <button class="burger pill glass" aria-label="Меню">Меню</button>
+  <button class="burger pill glass" aria-label="Меню" aria-controls="menu" aria-expanded="false">Меню</button>
 </header>
 
 <section class="hero">
@@ -18,7 +18,7 @@
   <div class="hero-col">
     <h1 class="grad">Майонез, масло, кетчуп и хрен из Минска</h1>
     <p>Минский маргариновый завод выпускает больше 80 продуктов под маркой «Золотая капля». Без ГМО, искусственных красителей и ароматизаторов.</p>
-    <div class="btns"><a class="pill solid" href="#products">Смотреть продукцию</a><a class="pill glass" href="#partners">Стать партнёром</a></div>
+    <div class="btns"><a class="pill solid" href="catalog.html">Смотреть продукцию</a><a class="pill glass" href="partners.html">Стать партнёром</a></div>
   </div>
   <ul class="hero-facts glass">
     <li><b>80+</b><span>наименований продукции</span></li>
@@ -48,7 +48,7 @@
     <div class="split-r">
       <p class="lead">Майонезы и соусы для дома, маргарины и жиры в ящиках по 20 кг для производств. Состав, фасовка и сроки хранения есть на странице каждого продукта.</p>
       <ul class="chips">
-        <li><a class="pill line" href="https://margarin.by/product/majonez/">Майонез</a></li><li><a class="pill line" href="https://margarin.by/product/sous/">Соус</a></li><li><a class="pill line" href="https://margarin.by/product/ketchup/">Кетчуп</a></li><li><a class="pill line" href="https://margarin.by/product/hren/">Хрен</a></li><li><a class="pill line" href="https://margarin.by/product/gorchicza/">Горчица</a></li><li><a class="pill line" href="https://margarin.by/product/margarin/">Маргарин</a></li><li><a class="pill line" href="https://margarin.by/product/spred/">Спред</a></li><li><a class="pill line" href="https://margarin.by/product/maslo-rastitelnoe/">Масло растительное</a></li><li><a class="pill line" href="https://margarin.by/product/tomatnaya-gruppa/">Томатная группа</a></li><li><a class="pill line" href="https://margarin.by/product/zhir-kulinarnyj-i-konditerskij/">Жир кулинарный и кондитерский</a></li><li><a class="pill line" href="https://margarin.by/product/inaya-produkcziya/">Иная продукция</a></li>
+        <li><a class="pill line" href="majonez.html">Майонез</a></li><li><a class="pill line" href="catalog.html">Соус</a></li><li><a class="pill line" href="catalog.html">Кетчуп</a></li><li><a class="pill line" href="catalog.html">Хрен</a></li><li><a class="pill line" href="catalog.html">Горчица</a></li><li><a class="pill line" href="catalog.html">Маргарин</a></li><li><a class="pill line" href="catalog.html">Спред</a></li><li><a class="pill line" href="catalog.html">Масло растительное</a></li><li><a class="pill line" href="catalog.html">Томатная группа</a></li><li><a class="pill line" href="catalog.html">Жир кулинарный и кондитерский</a></li><li><a class="pill line" href="catalog.html">Иная продукция</a></li>
       </ul>
       <dl class="spec">
         <div><dt>Маргарин «Молочный»</dt><dd>твёрдый, марка МТ / жир 82% / ящик 20 кг</dd></div>
@@ -65,7 +65,7 @@
       <p class="kick">Рецепты</p>
       <h2>Медовик с клубникой на маргарине «Сливочный»</h2>
       <p>На сайте собраны рецепты, где наши продукты работают по назначению: медовик на маргарине, чебуреки и кабачки в кляре на рапсовом масле, блинчики на молоке.</p>
-      <a class="pill line" href="https://margarin.by/recipe/">Все рецепты</a>
+      <a class="pill line" href="recipes.html">Все рецепты</a>
     </div>
   </div>
 </section>
@@ -73,7 +73,7 @@
 <section class="partners" id="partners">
   <div class="wrap">
     <div class="p-l"><p class="kick">Партнёрам</p><h2>Поставляем в 15 стран</h2><p>Работаем с торговыми сетями, дистрибьюторами и производствами. Условия обсуждаем с каждым партнёром отдельно.</p>
-      <a class="pill solid" href="mailto:mail@margarin.by">Написать в отдел продаж</a></div>
+      <a class="pill solid" href="partners.html#form">Оставить заявку</a></div>
     <ul class="countries"><li>Россия</li><li>Эстония</li><li>Латвия</li><li>Литва</li><li>Польша</li><li>Украина</li><li>Сербия</li><li>Нидерланды</li><li>Дания</li><li>Китай</li><li>Сингапур</li><li>Грузия</li><li>Армения</li><li>Азербайджан</li><li>Саудовская Аравия</li></ul>
   </div>
 </section>
